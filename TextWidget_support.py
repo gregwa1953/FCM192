@@ -126,6 +126,8 @@ def on_btnLoadFile(*args):
         INSERT,
         "1.0",
     )
+    # _w1.Scrolledtext1.mark_set(INSERT, END)
+    # print(_w1.Scrolledtext1.index(END))
     _w1.Scrolledtext1.focus_set()
 
 
@@ -360,6 +362,7 @@ def on_btnGoToTop(*args):
             print("    another arg:", arg)
         sys.stdout.flush()
     _w1.Scrolledtext1.yview("1.0")
+    _w1.Scrolledtext1.mark_set(INSERT, 1.0)
 
 
 def on_btnGotoBottom(*args):
@@ -369,6 +372,7 @@ def on_btnGotoBottom(*args):
             print("    another arg:", arg)
         sys.stdout.flush()
     _w1.Scrolledtext1.yview(END)
+    _w1.Scrolledtext1.mark_set(INSERT, END)
 
 
 def on_btnInsertImage(*args):
